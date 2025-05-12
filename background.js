@@ -1,8 +1,4 @@
-chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-    if (changeInfo.status === 'complete') {
-      chrome.sidePanel.setOptions({
-        path: 'sidepanel.html'
-      });
-    }
-  });
-  
+chrome.action.onClicked.addListener(() => {
+  // Open the side panel when the extension icon is clicked
+  chrome.sidePanel.open();
+});
