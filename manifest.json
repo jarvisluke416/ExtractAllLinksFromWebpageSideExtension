@@ -1,15 +1,31 @@
 {
-    "manifest_version": 3,
-    "name": "AllLinks",
-    "version": "1.0",
-    "description": "Extension with a default side panel.",
-    "icons": {
+  "manifest_version": 3,
+  "name": "AllLinks",
+  "version": "1.0",
+  "description": "Extension with a default side panel.",
+  "icons": {
+    "16": "icon.png"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "permissions": [
+    "tabs",
+    "scripting",
+    "activeTab",
+    "sidePanel"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "sidepanel.html",
+    "default_icon": {
       "16": "icon.png"
-    },
-    "side_panel": {
-      "default_path": "sidepanel.html"
-    },
-    "permissions": ["sidePanel", "tabs", "scripting"],
-    "host_permissions": ["<all_urls>"]
+    }
   }
-  
+}

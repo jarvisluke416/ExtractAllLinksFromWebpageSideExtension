@@ -1,18 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Side Panel</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Link Extractor</title>
   <style>
-    body { font-family: sans-serif; padding: 10px; }
-    ul { font-size: 12px; max-height: 600px; overflow-y: auto; padding-left: 20px; }
+    body {
+      font-family: Arial, sans-serif;
+      padding: 10px;
+      margin: 0;
+    }
+    ul {
+      padding-left: 0;
+      list-style: none;
+    }
+    li {
+      margin-bottom: 5px;
+    }
+    pre {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      background-color: #f1f1f1;
+      padding: 10px;
+    }
   </style>
 </head>
 <body>
-  <h3>Links on this Page</h3>
+  <h3>Link Extractor</h3>
   <button id="extractBtn">Extract Links</button>
   <ul id="linkList"></ul>
-
-  <script src="sidepanel.js"></script>
+  <button id="wrapLinksBtn" disabled>Wrap Links</button>
+  <pre id="formattedLinksOutput"></pre>
+  <script src="sidePanel.js"></script>
 </body>
 </html>
